@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { authActions } from "../store";
 import { useDispatch } from "react-redux";
+import { LogIn } from "../store/AuthSlice/AuthSlice";
 const Auth = () => {
   const dispatch = useDispatch();
   const [username, setUsername] = useState("");
@@ -8,8 +8,7 @@ const Auth = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(authActions);
-    dispatch(authActions.LogIn());
+    dispatch(LogIn());
     console.log("Logging in with:", { username, password });
   };
 
