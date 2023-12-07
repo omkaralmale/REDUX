@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { counterActions } from "../store"; // Adjust the path accordingly
+import { increase, decrease, toggle } from "../store/CounterSlice/CounterSlice";
 
 const Counter = () => {
   const counter = useSelector((state) => state.counter.counter);
@@ -8,22 +8,22 @@ const Counter = () => {
   const dispatch = useDispatch();
 
   const incCounterHandler = () => {
-    dispatch(counterActions.increase(1));
+    dispatch(increase(1));
   };
 
   const decCounterHandler = () => {
-    dispatch(counterActions.decrease(1));
+    dispatch(decrease(1));
   };
 
   const incBy5Handler = () => {
-    dispatch(counterActions.increase(5));
+    dispatch(increase(5));
   };
 
   const decBy5Handler = () => {
-    dispatch(counterActions.decrease(5));
+    dispatch(decrease(5));
   };
   const togglehandler = () => {
-    dispatch(counterActions.toggle());
+    dispatch(toggle());
   };
 
   const mainStyle = {

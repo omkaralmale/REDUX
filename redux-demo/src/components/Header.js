@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { authActions } from "../store";
+import { LogOut } from "../store/AuthSlice/AuthSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
   const handleLogout = () => {
-    dispatch(authActions.LogOut());
+    dispatch(LogOut());
   };
   const isAuth = useSelector((state) => state.auth.isAuth);
   const navStyle = {
