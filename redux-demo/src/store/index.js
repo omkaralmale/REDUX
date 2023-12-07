@@ -5,12 +5,10 @@ const counterReducer = (state = { counter: 0 }, action) => {
     case "INC":
       return {
         counter: state.counter + action.payload,
-        payload: action.payload,
       };
     case "DESC":
       return {
         counter: state.counter - action.payload,
-        payload: action.payload,
       };
     default:
       return state;

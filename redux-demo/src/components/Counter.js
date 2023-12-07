@@ -14,11 +14,11 @@ const Counter = () => {
   };
 
   const incBy5Handler = () => {
-    dispatch({ type: "INC+5", payload: 5 });
+    dispatch({ type: "INC", payload: 5 });
   };
 
   const decBy5Handler = () => {
-    dispatch({ type: "DESC+5", payload: 5 });
+    dispatch({ type: "DESC", payload: 5 });
   };
 
   return (
